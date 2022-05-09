@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&family=Space+Mono&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="styleindex.css">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Space tourism website</title>
+</head>
+<body>
+
+<header>
+  <img src="assets/shared/logo.svg" alt="logo">
+  <div id="ligne"></div>
+  <div class="menu">
+  <a href="index.html">00 Home</a>
+  <a href="destination-moon.html">01 Destination</a>
+  <a href="crew-commander.html">02 Crew</a>
+  <a href="technology-vehicle.html"  class="isSelected"> 03 Technology</a>
+  </div>
+</header>
+<div class="PickTech">03 <h1>Space launch 101<h1></div>
+ <div class="Contenu">
+   <div class="leftPart">
+     <div>
+     <input type="radio" name="Selecteur" id="One" checked onclick=FirstTech();>
+     <label for="One">1</label>
+     </div>
+
+     <div>
+      <input type="radio" name="Selecteur" id="Two" onclick=SecondTech();>
+      <label for="Two">2</label>
+      </div>
+
+      <div>
+        <input type="radio" name="Selecteur" id="Three" onclick=FinalTech();>
+        <label for="Three">3</label>
+        </div>
+ 
+</div><div class="rightPart">
+  <br><br><br> <div id="textDescription"></div> 
+  <div id="image"></div>
+
+</div>
+</div>
+
+
+
+  <style>
+
+   .rightPart{
+     display: flex;
+     flex-direction: row;
+     color: #D0D6F9;
+   }
+
+   .rightPart h1{
+      color: white;
+   }
+
+   .rightPart img{
+     height: 400px;
+   }
+
+   #textDescription{
+     margin-top: 50px;
+   }
+   body{
+     background: url(assets/technology/background-technology-desktop.jpg)no-repeat;
+     background-size: cover;
+     color: white;
+     font-family: 'Barlow Condensed', sans-serif;
+     font-family: 'Space Mono', monospace;
+
+   }
+
+
+   .PickTech{
+      margin-left: 100px;
+      color: #D0D6F9;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      font-size: 20px;
+      font-style: bold;
+      letter-spacing: 2px;
+      justify-self: flex-start;
+    }
+
+    .PickTech h1{
+      color: white;
+      font-size: 20px;
+      margin-left: 10px;
+    }
+
+    .leftPart{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+     
+      width: 30%;
+    }
+
+    .rightPart{
+      width: 70%;
+      
+    }
+
+    .leftPart input{
+      display: none;
+    }
+
+    .leftPart label{
+      display: block;
+      width: 30px;
+      height: 30px;
+      border: 1px solid black;
+      border-radius: 30px;
+      text-align: center;
+      color: white;
+      line-height: 30px;
+      margin-top: 80px;
+
+    }
+
+    .leftPart label:hover{
+      background-color: rgb(37, 37, 37);
+    }
+
+    .leftPart input:checked + label{
+      background-color: white;
+      color: black;
+    }
+
+    .Contenu{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+
+
+
+  </style>
+
+
+
+<script>
+  let ImageTech = document.getElementById("image");
+  let TextTech = document.getElementById("textDescription");
+
+  FirstTech();
+
+  function FirstTech(){
+    ImageTech.innerHTML = "<img src='assets/technology/image-launch-vehicle-portrait.jpg' alt='image'>";
+    TextTech.innerHTML = "<h4>THE TERMINOLOGY... </h4><h1>Launch vehicle</h1><h4>A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!</h4>"
+  }
+
+
+  function SecondTech(){
+    ImageTech.innerHTML = "<img src='assets/technology/image-spaceport-portrait.jpg' alt='image'>";
+    TextTech.innerHTML = "<h4>THE TERMINOLOGY... </h4><h1>Spaceport</h1><h4>A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, by analogy to the seaport for ships or airport for aircraft. Based in the famous Cape Canaveral, our spaceport is ideally situated to take advantage of the Earth’s rotation for launch.</h4>"
+  }
+
+
+  function FinalTech(){
+    ImageTech.innerHTML = "<img src='assets/technology/image-space-capsule-portrait.jpg' alt='image'>";
+    TextTech.innerHTML = "<h4>THE TERMINOLOGY... </h4><h1>Space capsule</h1><h4>A space capsule is an often-crewed spacecraft that uses a blunt-body reentry capsule to reenter the Earth's atmosphere without wings. Our capsule is where you'll spend your time during the flight. It includes a space gym, cinema, and plenty of other activities to keep you entertained.</h4>"
+  }
+
+
+
+</script>
+</body>
+</html>

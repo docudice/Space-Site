@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&family=Space+Mono&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="styleindex.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Space tourism website</title>
+</head>
+<body>
+
+  <header>
+    <img src="assets/shared/logo.svg" alt="logo">
+    <div id="ligne"></div>
+    <div class="menu">
+    <a href="index.html">00 Home</a>
+    <a href="destination-moon.html" class="isSelected">01 Destination</a>
+    <a href="crew-commander.html">02 Crew</a>
+    <a href="technology-vehicle.html"> 03 Technology</a>
+    </div>
+  </header>
+  <div class="PickDest">01 <h1>Pick your destination<h1></div>
+  
+
+      <div id="canvasInfo">
+      <img id="imagetoDest" src="" alt="image">
+
+      <div id="information">
+        <div id="choisDestination">
+          <div>
+          <input type="radio" id="Moon" name="Destination" value="Moon" checked onclick=MoonDestination();>
+          <label for="Moon">Moon</label>
+          </div>
+          <div>
+            <input type="radio" id="Mars" name="Destination" value="Mars" onclick=MarsDestination();>
+            <label for="Mars">Mars</label>
+            </div>
+            <div>
+              <input type="radio" id="Europa" name="Destination" value="Europa" onclick=EuropaDestination();>
+              <label for="Europa">Europa</label>
+              </div>
+              <div>
+              <input type="radio" id="Titan" name="Destination" value="Titan" onclick=TitanDestination();>
+              <label for="Titan">Titan</label>
+              </div></div>
+
+
+      <h1 id="titleDest"></h1>
+      <div id="textest"></div><br>
+      <div id="barre"></div>
+      <div id="distanceandTime">
+     
+      <div id="Distances"></div>
+    
+     
+      <div id="TimeTo"></div> 
+      </div>
+      </div>
+</div>
+
+
+
+
+  <style>
+
+
+    body{
+      background: url(assets/destination/background-destination-desktop.jpg)no-repeat;
+      background-size: cover;
+      font-family: 'Barlow Condensed', sans-serif;
+font-family: 'Space Mono', monospace;
+
+  color: white;
+    }
+
+    .PickDest{
+      margin-left: 100px;
+      color: #D0D6F9;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      font-size: 20px;
+      font-style: bold;
+      letter-spacing: 2px;
+    }
+
+    .PickDest h1{
+      color: white;
+      font-size: 20px;
+      margin-left: 10px;
+    }
+
+  #choisDestination{
+    color: #D0D6F9;
+    display: flex;
+    flex-direction: row;
+    font-size: 15px;
+  }
+
+  #barre{
+    width: 100%;
+    height: 1px;
+    background-color: #D0D6F9;
+
+  }
+  #choisDestination input{
+ display: none;
+  }
+  #choisDestination label{
+ margin-left: 10px;
+  }
+
+
+  #choisDestination input:checked + label{
+    color: white;
+ border-bottom: 2px solid white;
+  }
+  
+
+  #canvasInfo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-top: 60px;
+  }
+
+  #canvasInfo img{
+    width: 300px;
+    height: 300px;
+    margin-left: 100px;
+  }
+
+  #information{
+    margin-left: 30px;
+    width: 40%;
+    margin-right: 100px;
+  }
+
+
+  #information h1{
+    font-size: 60px;
+    color: white;
+    line-height: 1px;
+  }
+
+  #textest{
+    color: #D0D6F9;
+  }
+  label:hover{
+    border-bottom: 2px solid #D0D6F9;
+  }
+  #distanceandTime{
+    color: #D0D6F9;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #distanceandTime h2{
+    color: white;
+    line-height: 1px;
+  }
+  </style>
+
+  <script>
+
+    let Titre = document.getElementById("titleDest");
+    let Texts = document.getElementById("textest");
+    let Images = document.getElementById("imagetoDest");
+    let TimeToTravel = document.getElementById("TimeTo");
+    let DistanceTo = document.getElementById("Distances");
+MoonDestination();
+
+function MoonDestination(){
+  Titre.innerHTML = "Moon";
+  Texts.innerHTML =  "See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.";
+  Images.src = "assets/destination/image-moon.png";
+  DistanceTo.innerHTML = "<h4> Avg. distance</4><h2>384,400 km</h2>"
+  TimeToTravel.innerHTML = "<h4> Est. travel time</4><h2>3 days</h2>"
+}
+
+
+function MarsDestination(){
+  Titre.innerHTML = "Mars";
+  Texts.innerHTML = "Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!";
+   Images.src = "assets/destination/image-mars.png";
+  DistanceTo.innerHTML = "<h4> Avg. distance</4><h2>225 mil. km</h2>"
+  TimeToTravel.innerHTML = "<h4> Est. travel time</4><h2>9 months</h2>"
+}
+
+
+function EuropaDestination(){
+  Titre.innerHTML = "Europa";
+  Texts.innerHTML =  "The smallest of the four Galilean moons orbiting Jupiter, Europa is a winter lover’s dream. With an icy surface, it’s perfect for a bit of ice skating, curling, hockey, or simple relaxation in your snug wintery cabin.";
+   Images.src = "assets/destination/image-europa.png";
+  DistanceTo.innerHTML = "<h4> Avg. distance</4><h2>628 mil. km</h2>"
+  TimeToTravel.innerHTML = "<h4> Est. travel time</4><h2>3 years</h2>"
+}
+
+
+function TitanDestination(){
+  Titre.innerHTML = "Titan";
+  Texts.innerHTML =  "The only moon known to have a dense atmosphere other than Earth, Titan is a home away from home (just a few hundred degrees colder!). As a bonus, you get striking views of the Rings of Saturn.";
+   Images.src = "assets/destination/image-titan.png";
+  DistanceTo.innerHTML = "<h4> Avg. distance</4><h2>1.6 bil. km</h2>"
+  TimeToTravel.innerHTML = "<h4> Est. travel time</4><h2>7 years</h2>"
+}
+
+
+
+     
+  </script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&family=Space+Mono&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="styleindex.css">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Space tourism website</title>
+</head>
+<body>
+
+
+<header>
+  <img src="assets/shared/logo.svg" alt="logo">
+  <div id="ligne"></div>
+  <div class="menu">
+  <a href="index.html" class="isSelected">00 Home</a>
+  <a href="destination-moon.html">01 Destination</a>
+  <a href="crew-commander.html">02 Crew</a>
+  <a href="technology-vehicle.html"> 03 Technology</a>
+  </div>
+</header>
+<br><br><br><br><br><br><br><br><br>
+<div id="conteuneur">
+<section>
+  <h2 class="textcolorChange">
+  So, you want to travel to
+  </h2><h1>
+  Space
+  </h1><h3 class="textcolorChange">
+  Let’s face it; if you want to go to space, you might as well <br> genuinely go to 
+  outer space and not hover kind of on the <br> edge of it. Well sit back, and relax 
+  because we’ll give you a <br> truly out of this world experience!
+</h3>
+</section>
+ 
+  <input type="button" value="Explore" id="ButtonExplore" onclick=NavigationButton();>
+
+
+
+</div>
+<style>
+
+  #ButtonExplore:hover{
+    animation: Animation 5s infinite;
+  }
+
+  @keyframes Animation {
+  80% {box-shadow: 0px 0px 19px 22px #FFFFFF;}
+}
+
+
+body{
+  background: url("assets/home/background-home-desktop.jpg")no-repeat;
+  background-size: cover;
+  
+
+  font-family: 'Barlow Condensed', sans-serif;
+font-family: 'Space Mono', monospace;
+
+  color: white;
+ display: flex;
+ flex-direction: column;
+
+ 
+ 
+}
+
+h1{
+  font-size: 40px;
+  line-height: 5px;
+}
+
+h3{
+ 
+  font-size: 10px;
+  
+}
+
+h2{
+  line-height: 1px;
+}
+
+section{
+  margin-left: 20px;
+}
+
+#conteuneur input{
+  margin-right: 70px;
+  width: 200px;
+  height: 200px;
+  border-radius: 200px;
+  border: none;
+}
+#conteuneur{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+</style>
+
+<script>
+
+function NavigationButton(){
+  location.replace("destination-moon.html");
+}
+</script>
+</body>
+</html>
